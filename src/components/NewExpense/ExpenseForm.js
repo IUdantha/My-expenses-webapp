@@ -20,6 +20,7 @@ const ExpenseForm = (props) => {
   };
 
   const submitHandler = (event) => {
+    //prevent default behavior of famr submission
     event.preventDefault();
 
     const expenseData = {
@@ -30,6 +31,7 @@ const ExpenseForm = (props) => {
 
     props.onSaveExpenseData(expenseData);
 
+    //clear the relevent fields
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
